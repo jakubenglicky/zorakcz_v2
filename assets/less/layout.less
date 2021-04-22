@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  color: #20303c;
+  font-family: 'Rubik',sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  @media @w576 {
+    font-size: 20px;
+  }
+  @media @w768 {
+    font-size: 22px;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  color: @color-red;
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+.row {
+  .flex-with-all (wrap, initial, initial);
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-sm-4,
+.col-sm-6,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-lg-3,
+.col-lg-4,
+.col-lg-8,
+.col-xl-2_4 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-4 {
+  @media @w768 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+
