@@ -2,7 +2,7 @@
   <header>
     <nav class="click-dropdown">
       <div class="navbar-brand">
-        <nuxt-link to="/"><img src="/img/logo.png"></nuxt-link>
+        <nuxt-link to="/"><img src="img/logo.png"></nuxt-link>
       </div>
       <button class="navbar-toggler open-drop"><span></span></button>
       <div class="navbar-content click-dropdown-content">
