@@ -1,7 +1,14 @@
 .product-box {
   position: relative;
   display: grid;
+  color: white;
   @media @w768 {
+    min-height: 350px;
+  }
+  @media @w1200 {
+    min-height: 500px;
+  }
+  @media (min-width: 1600px) {
     min-height: 720px;
   }
   img {
@@ -12,7 +19,43 @@
     object-fit: scale-down;
     -o-object-fit: cover;
     object-fit: cover;
+    transition: .5s;
     z-index: -1;
     filter: brightness(.85);
+  }
+  &__text {
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  h3 {
+    transition: visibility 1s, opacity 1s, height 0s;
+  }
+  p {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  h3 {
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover {
+    img {
+      filter: brightness(.6);
+    }
+    h3 {
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0s;
+    }
+    p {
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+      transition: visibility 1s, opacity 1s, height 0s;
+    }
   }
 }
